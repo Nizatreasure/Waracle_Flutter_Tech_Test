@@ -12,7 +12,6 @@ class ApiClient {
     final response = await http
         .get(Uri.parse('$baseUrl$path'))
         .timeout(const Duration(seconds: 20));
-    ;
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);
