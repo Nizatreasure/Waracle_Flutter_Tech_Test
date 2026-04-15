@@ -36,7 +36,7 @@ class AppTheme {
       {double? fontSize, Color? color, FontWeight? fontWeight}) {
     return TextStyle(
       color: color ?? Colors.white,
-      fontSize: fontSize ?? 18,
+      fontSize: fontSize ?? 16,
       fontWeight: fontWeight ?? FontWeight.w700,
     );
   }
@@ -45,7 +45,7 @@ class AppTheme {
       {double? fontSize, Color? color, FontWeight? fontWeight}) {
     return TextStyle(
       color: color ?? Colors.white,
-      fontSize: fontSize ?? 16,
+      fontSize: fontSize ?? 14,
       fontWeight: fontWeight ?? FontWeight.w400,
     );
   }

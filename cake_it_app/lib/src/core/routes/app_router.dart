@@ -1,5 +1,5 @@
 import 'package:cake_it_app/src/features/cake_details_view.dart';
-import 'package:cake_it_app/src/features/cake_list_view.dart';
+import 'package:cake_it_app/src/features/cakes/presentation/views/cake_list_view.dart';
 import 'package:cake_it_app/src/settings/settings_view.dart';
 import 'package:go_router/go_router.dart';
 

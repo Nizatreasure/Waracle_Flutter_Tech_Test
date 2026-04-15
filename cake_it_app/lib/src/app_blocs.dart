@@ -9,5 +9,5 @@ class AppBlocs {
     ),
   ];
 
-  static List<BlocProvider<ThemeCubit>> get blocs => _blocs;
+  static List<BlocProvider<dynamic>> get blocs => _blocs;
 }
