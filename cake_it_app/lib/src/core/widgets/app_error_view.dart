@@ -16,7 +16,7 @@ class AppErrorView extends StatelessWidget {
 
     return Center(
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 50),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

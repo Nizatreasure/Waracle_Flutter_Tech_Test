@@ -11,6 +11,7 @@ class AppTheme {
         scrolledUnderElevation: 0,
         toolbarHeight: 90,
         surfaceTintColor: Colors.transparent,
+        backgroundColor: Color(0xFF1C1C1E),
       ),
       textTheme: TextTheme(
         bodyLarge: _boldTextStyle(),
@@ -26,6 +27,7 @@ class AppTheme {
         scrolledUnderElevation: 0,
         toolbarHeight: 90,
         surfaceTintColor: Colors.transparent,
+        backgroundColor: Color(0xFFF2F2F2),
       ),
       textTheme: TextTheme(
         bodyLarge: _boldTextStyle(color: Colors.black),

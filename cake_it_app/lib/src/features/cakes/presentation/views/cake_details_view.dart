@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 
 /// Displays detailed information about a cake.
 class CakeDetailsView extends StatelessWidget {
-  const CakeDetailsView({
-    super.key,
-    required this.cake,
-  });
+  const CakeDetailsView({super.key, required this.cake});
 
   final CakeModel cake;
 
@@ -18,35 +15,38 @@ class CakeDetailsView extends StatelessWidget {
         title: Text(AppLocalizations.of(context)!.cakeDetails),
         centerTitle: false,
       ),
-      body: SizedBox(
+      body: Container(
+        padding: const EdgeInsets.all(24),
         width: double.infinity,
-        child: Column(
-          spacing: 16,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: 16),
-            Hero(
-              tag: '${cake.title}${cake.description}',
-              child: CircleAvatar(
-                radius: 80,
-                backgroundColor: Colors.grey.shade600,
-                child: ClipOval(
-                  child: Image.network(
-                    cake.image!,
-                    fit: BoxFit.cover,
-                    width: 160,
-                    height: 160,
-                    errorBuilder: (context, error, stackTrace) {
-                      return const Icon(Icons.broken_image, size: 60);
-                    },
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 16,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Hero(
+                tag: '${cake.title}${cake.description}',
+                child: CircleAvatar(
+                  radius: 80,
+                  backgroundColor: Colors.grey.shade600,
+                  child: ClipOval(
+                    child: Image.network(
+                      cake.image!,
+                      fit: BoxFit.cover,
+                      width: 160,
+                      height: 160,
+                      errorBuilder: (context, error, stackTrace) {
+                        return const Icon(Icons.broken_image, size: 60);
+                      },
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Text('${cake.title}', style: Theme.of(context).textTheme.bodyLarge),
-            Text('${cake.description}'),
-          ],
+              const SizedBox(height: 10),
+              Text('${cake.title}',
+                  style: Theme.of(context).textTheme.bodyLarge),
+              Text('${cake.description}'),
+            ],
+          ),
         ),
       ),
     );
