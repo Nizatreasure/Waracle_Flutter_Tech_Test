@@ -15,6 +15,12 @@ class CakeListLoaded extends CakeListState {
   CakeListLoaded(this.cakes);
 }
 
+class CakeListRefreshing extends CakeListState {
+  final List<CakeModel> cakes;
+
+  CakeListRefreshing(this.cakes);
+}
+
 class CakeListError extends CakeListState {
   final String message;
 

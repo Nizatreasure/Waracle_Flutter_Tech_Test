@@ -14,12 +14,21 @@ class CakeListBloc extends Bloc<CakeListEvent, CakeListState> {
 
   Future<void> _onLoadCakes(
       LoadCakes event, Emitter<CakeListState> emit) async {
-    emit(CakeListLoading());
+    final currentState = state;
+    if (currentState is CakeListLoaded) {
+      emit(CakeListRefreshing(currentState.cakes));
+    } else {
+      emit(CakeListLoading());
+    }
     try {
       final cakes = await repository.fetchCakes();
       emit(CakeListLoaded(cakes));
     } catch (_) {
-      emit(CakeListError('Failed to load cakes'));
+      if (currentState is CakeListLoaded) {
+        emit(CakeListLoaded(currentState.cakes));
+      } else {
+        emit(CakeListError('Failed to load cakes'));
+      }
     }
   }
 }

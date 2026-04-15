@@ -67,12 +67,14 @@ class CakeListView extends StatelessWidget {
           onRefresh: () => _refreshCakes(context),
         ),
         BlocBuilder<CakeListBloc, CakeListState>(builder: (context, state) {
-          if (state is CakeListLoaded) {
-            final cakes = state.cakes;
+          if (state is CakeListLoaded || state is CakeListRefreshing) {
+            final cakes = state is CakeListLoaded
+                ? state.cakes
+                : (state as CakeListRefreshing).cakes;
             return SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
-                  final cake = state.cakes[index];
+                  final cake = cakes[index];
                   return _buildCakeItem(cake, context);
                 },
                 childCount: cakes.length,
@@ -94,14 +96,16 @@ class CakeListView extends StatelessWidget {
       onRefresh: () => _refreshCakes(context),
       child:
           BlocBuilder<CakeListBloc, CakeListState>(builder: (context, state) {
-        if (state is CakeListLoaded) {
-          final cakes = state.cakes;
+        if (state is CakeListLoaded || state is CakeListRefreshing) {
+          final cakes = state is CakeListLoaded
+              ? state.cakes
+              : (state as CakeListRefreshing).cakes;
           return ListView.builder(
             physics: const AlwaysScrollableScrollPhysics(),
             restorationId: 'cakeListView',
             itemCount: cakes.length,
             itemBuilder: (context, index) {
-              final cake = state.cakes[index];
+              final cake = cakes[index];
               return _buildCakeItem(cake, context);
             },
           );
