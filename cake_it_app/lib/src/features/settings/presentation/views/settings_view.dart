@@ -6,7 +6,9 @@ import '../../../../core/theme/theme_cubit.dart';
 
 /// Displays the various settings that can be customized by the user.
 ///
-
+/// Use [ThemeCubit] to manage the state of the theme settings and handle
+/// any changes made by the user.
+///
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
 
@@ -15,6 +17,7 @@ class SettingsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.settings),
+        centerTitle: false,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -30,13 +33,13 @@ class SettingsView extends StatelessWidget {
             String text;
             switch (mode) {
               case ThemeMode.system:
-                text = 'System Theme';
+                text = AppLocalizations.of(context)!.systemTheme;
                 break;
               case ThemeMode.light:
-                text = 'Light Theme';
+                text = AppLocalizations.of(context)!.lightTheme;
                 break;
               case ThemeMode.dark:
-                text = 'Dark Theme';
+                text = AppLocalizations.of(context)!.darkTheme;
                 break;
             }
             return DropdownMenuItem(

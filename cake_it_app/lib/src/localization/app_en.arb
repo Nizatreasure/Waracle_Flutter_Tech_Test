@@ -7,5 +7,8 @@
   "cakes": "Cakes",
   "retry": "Retry",
   "somethingWentWrong": "Something went wrong",
-  "cakeDetails": "Cake Details"
+  "cakeDetails": "Cake Details",
+  "lightTheme": "Light Theme",
+  "darkTheme": "Dark Theme",
+  "systemTheme": "System Theme"
 }

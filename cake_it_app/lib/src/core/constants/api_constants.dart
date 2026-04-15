@@ -1,3 +1,5 @@
+/// A class that holds the API constants used in the application, such as
+/// the base URL and specific endpoints for fetching data.
 class ApiConstants {
   static const String baseUrl = "https://gist.githubusercontent.com";
   static const String cakeListEndpoint =

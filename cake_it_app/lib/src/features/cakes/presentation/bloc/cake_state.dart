@@ -1,5 +1,8 @@
 part of 'cake_bloc.dart';
 
+/// States related to the cake list, such as loading, loaded,
+/// and error states.
+
 abstract class CakeListState {}
 
 class CakeListInitial extends CakeListState {}

@@ -16,6 +16,7 @@ class CakeDetailsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.cakeDetails),
+        centerTitle: false,
       ),
       body: SizedBox(
         width: double.infinity,
@@ -43,8 +44,7 @@ class CakeDetailsView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Text('${cake.title}',
-                style: Theme.of(context).textTheme.titleLarge),
+            Text('${cake.title}', style: Theme.of(context).textTheme.bodyLarge),
             Text('${cake.description}'),
           ],
         ),

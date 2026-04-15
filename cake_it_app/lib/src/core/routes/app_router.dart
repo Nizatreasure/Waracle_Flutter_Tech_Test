@@ -7,6 +7,8 @@ import '../../app.dart';
 import '../../features/cakes/data/models/cake_model.dart';
 import 'route_names.dart';
 
+/// A class that defines the routes for the application using GoRouter.
+
 class AppRouter {
   static GoRouter router = GoRouter(
     navigatorKey: MyApp.navigatorKey,

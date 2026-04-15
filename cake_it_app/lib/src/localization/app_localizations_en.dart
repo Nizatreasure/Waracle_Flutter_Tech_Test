@@ -25,4 +25,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cakeDetails => 'Cake Details';
+
+  @override
+  String get lightTheme => 'Light Theme';
+
+  @override
+  String get darkTheme => 'Dark Theme';
+
+  @override
+  String get systemTheme => 'System Theme';
 }

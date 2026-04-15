@@ -5,6 +5,7 @@ import '../../data/repositories/cake_repository.dart';
 part 'cake_event.dart';
 part 'cake_state.dart';
 
+/// Bloc that manages the state of the cake list.
 class CakeListBloc extends Bloc<CakeListEvent, CakeListState> {
   final CakeRepository repository;
   CakeListBloc(this.repository) : super(CakeListInitial()) {
