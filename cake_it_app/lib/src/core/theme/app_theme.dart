@@ -10,6 +10,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
         toolbarHeight: 90,
+        surfaceTintColor: Colors.transparent,
       ),
       textTheme: TextTheme(
         bodyLarge: _boldTextStyle(),
@@ -24,6 +25,7 @@ class AppTheme {
       appBarTheme: AppBarTheme(
         scrolledUnderElevation: 0,
         toolbarHeight: 90,
+        surfaceTintColor: Colors.transparent,
       ),
       textTheme: TextTheme(
         bodyLarge: _boldTextStyle(),

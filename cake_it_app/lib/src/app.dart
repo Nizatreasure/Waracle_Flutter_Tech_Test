@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: AppBlocs.blocs,
-      child: BlocBuilder<ThemeCubit, ThemeState>(builder: (context, state) {
+      child: BlocBuilder<ThemeCubit, ThemeState>(builder: (ctx, state) {
         return MaterialApp.router(
           debugShowCheckedModeBanner: false,
           restorationScopeId: 'app',

@@ -6,5 +6,6 @@
   "settings": "Settings",
   "cakes": "Cakes",
   "retry": "Retry",
-  "somethingWentWrong": "Something went wrong"
+  "somethingWentWrong": "Something went wrong",
+  "cakeDetails": "Cake Details"
 }

@@ -123,6 +123,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Something went wrong'**
   String get somethingWentWrong;
+
+  /// No description provided for @cakeDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Cake Details'**
+  String get cakeDetails;
 }
 
 class _AppLocalizationsDelegate
