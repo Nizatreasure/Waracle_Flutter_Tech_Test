@@ -43,8 +43,12 @@ class CakeDetailsView extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text('${cake.title}',
+                  textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.bodyLarge),
-              Text('${cake.description}'),
+              Text(
+                '${cake.description}',
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),

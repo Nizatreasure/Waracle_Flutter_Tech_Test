@@ -130,8 +130,16 @@ class CakeListView extends StatelessWidget {
 
   Widget _buildCakeItem(CakeModel cake, BuildContext context) {
     return ListTile(
-        title: Text('${cake.title}'),
-        subtitle: Text('${cake.description}'),
+        title: Text(
+          '${cake.title}',
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        subtitle: Text(
+          '${cake.description}',
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
         leading: Hero(
           tag: '${cake.title}${cake.description}',
           child: CircleAvatar(
