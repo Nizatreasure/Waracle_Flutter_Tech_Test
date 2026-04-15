@@ -7,21 +7,24 @@ import '../../app.dart';
 import 'route_names.dart';
 
 class AppRouter {
-  static GoRouter get router => GoRouter(
-        navigatorKey: MyApp.navigatorKey,
-        routes: [
-          GoRoute(
-            path: RouteNames.home,
-            builder: (context, state) => const CakeListView(),
-          ),
-          GoRoute(
-            path: RouteNames.details,
-            builder: (context, state) => const CakeDetailsView(),
-          ),
-          GoRoute(
-            path: RouteNames.settings,
-            builder: (context, state) => const SettingsView(),
-          ),
-        ],
-      );
+  static GoRouter router = GoRouter(
+    navigatorKey: MyApp.navigatorKey,
+    routes: [
+      GoRoute(
+        path: RouteNames.home,
+        name: RouteNames.home,
+        builder: (context, state) => const CakeListView(),
+      ),
+      GoRoute(
+        path: RouteNames.details,
+        name: RouteNames.details,
+        builder: (context, state) => const CakeDetailsView(),
+      ),
+      GoRoute(
+        path: RouteNames.settings,
+        name: RouteNames.settings,
+        builder: (context, state) => const SettingsView(),
+      ),
+    ],
+  );
 }

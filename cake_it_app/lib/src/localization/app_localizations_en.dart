@@ -10,4 +10,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appTitle => 'waracle_flutter_tech_test';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get cakes => 'Cakes';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get somethingWentWrong => 'Something went wrong';
 }

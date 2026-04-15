@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import 'package:cake_it_app/src/core/routes/route_names.dart';
 import 'package:cake_it_app/src/features/cake.dart';
 import 'package:cake_it_app/src/features/cake_details_view.dart';
 import 'package:cake_it_app/src/settings/settings_view.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:http/http.dart' as http;
 
 /// Displays a list of cakes.
@@ -12,8 +14,6 @@ class CakeListView extends StatefulWidget {
   const CakeListView({
     super.key,
   });
-
-  static const routeName = '/';
 
   @override
   State<CakeListView> createState() => _CakeListViewState();
@@ -50,6 +50,7 @@ class _CakeListViewState extends State<CakeListView> {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
+              context.pushNamed(RouteNames.settings);
               // Navigate to the settings page. If the user leaves and returns
               // to the app after it has been killed while running in the
               // background, the navigation stack is restored.

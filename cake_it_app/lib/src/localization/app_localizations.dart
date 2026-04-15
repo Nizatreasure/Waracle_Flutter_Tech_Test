@@ -99,6 +99,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'waracle_flutter_tech_test'**
   String get appTitle;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// No description provided for @cakes.
+  ///
+  /// In en, this message translates to:
+  /// **'Cakes'**
+  String get cakes;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// No description provided for @somethingWentWrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get somethingWentWrong;
 }
 
 class _AppLocalizationsDelegate

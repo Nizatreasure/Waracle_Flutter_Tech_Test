@@ -2,5 +2,9 @@
   "appTitle": "waracle_flutter_tech_test",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+  "settings": "Settings",
+  "cakes": "Cakes",
+  "retry": "Retry",
+  "somethingWentWrong": "Something went wrong"
 }
