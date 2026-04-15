@@ -1,4 +1,3 @@
-import 'package:cake_it_app/src/features/cake.dart';
 import 'package:cake_it_app/src/features/cakes/data/models/cake_model.dart';
 import 'package:cake_it_app/src/localization/app_localizations.dart';
 import 'package:flutter/material.dart';

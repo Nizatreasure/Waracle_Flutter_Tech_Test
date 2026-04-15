@@ -5,15 +5,7 @@ import 'theme_state.dart';
 class ThemeCubit extends Cubit<ThemeState> {
   ThemeCubit() : super(const ThemeState(ThemeMode.system));
 
-  void setLightTheme() {
-    emit(const ThemeState(ThemeMode.light));
-  }
-
-  void setDarkTheme() {
-    emit(const ThemeState(ThemeMode.dark));
-  }
-
-  void setSystemTheme() {
-    emit(const ThemeState(ThemeMode.system));
+  void setThemeMode(ThemeMode themeMode) {
+    emit(state.copyWith(themeMode: themeMode));
   }
 }

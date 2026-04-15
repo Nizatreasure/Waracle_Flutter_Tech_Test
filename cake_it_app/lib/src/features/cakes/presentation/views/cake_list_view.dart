@@ -36,8 +36,6 @@ class CakeListView extends StatelessWidget {
             return RefreshIndicator(
               onRefresh: () async {
                 context.read<CakeListBloc>().add(LoadCakes());
-                await context.read<CakeListBloc>().stream.firstWhere(
-                    (state) => state is! CakeListLoading); // Wait for load
               },
               child: ListView.builder(
                 restorationId: 'cakeListView',

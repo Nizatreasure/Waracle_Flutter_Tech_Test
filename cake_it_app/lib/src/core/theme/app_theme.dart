@@ -28,8 +28,8 @@ class AppTheme {
         surfaceTintColor: Colors.transparent,
       ),
       textTheme: TextTheme(
-        bodyLarge: _boldTextStyle(),
-        bodyMedium: _normalTextStyle(),
+        bodyLarge: _boldTextStyle(color: Colors.black),
+        bodyMedium: _normalTextStyle(color: Colors.black),
       ),
     );
   }
